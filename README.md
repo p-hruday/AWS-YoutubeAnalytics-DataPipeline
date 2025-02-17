@@ -1,51 +1,49 @@
-# AWS-YoutubeAnalytics-DataPipeline
+# AWS-YoutubeAnalytics-DataPipeline 📊
 
-## Project Overview
+## 🌟 Project Overview
+This project leverages AWS to perform in-depth analysis of YouTube video statistics, uncovering trends in video popularity across different regions. By employing scalable data engineering techniques, we aim to optimize content strategies and drive data-driven decisions.
 
-This project analyzes YouTube video statistics to uncover insights into video popularity trends across different regions using scalable data engineering practices on AWS.
+## 🎯 Goals
+🔄**Data Ingestion** : Develop a robust system for ingesting data from YouTube APIs and other sources, ensuring timely updates and data accuracy.
 
-## Goals
+🔧**ETL System** : Transform raw data into a structured format that's optimized for analysis, using AWS services to automate and streamline the process.
 
-- **Data Ingestion**: Implement a robust system to ingest data from YouTube APIs and other sources.
-- **ETL System**: Transform raw data into a structured format suitable for analysis.
-- **Data Lake**: Utilize AWS S3 for centralized storage to handle data from various sources efficiently.
-- **Scalability**: Ensure the system can scale dynamically with increasing data volumes.
-- **Cloud Utilization**: Leverage AWS services to handle large-scale data processing.
-- **Data Visualization**: Develop a QuickSight dashboard to visualize key metrics and trends.
+🏞️**Data Lake** : Utilize AWS S3 to create a centralized repository that efficiently manages and stores data from diverse sources.
 
-## Data Flow Description
+⚖️**Scalability** : Design the system to dynamically scale in response to fluctuations in data volume and query load.
 
-1. **Data Collection**: Data is ingested from the YouTube API and stored in raw format in Amazon S3.
+☁️**Cloud Utilization** : Maximize the use of AWS services to handle large-scale data processing and storage needs.
+
+📈**Data Visualization** : Implement QuickSight dashboards to visually represent the data, facilitating easy comprehension of key metrics and trends.
+
+## 🔄 Data Flow Description
+1. **Data Collection**: Fetch data from the YouTube API and store it in its raw form in Amazon S3.
 2. **Data Processing**:
-   - AWS Glue is used to catalog raw data and manage ETL jobs.
-   - AWS Lambda functions are triggered to process and transform data as needed.
-3. **Data Storage**: Processed data is stored back in S3, ensuring it is ready for analysis.
+   - Utilize AWS Glue for cataloging raw data and orchestrating ETL jobs.
+   - Employ AWS Lambda functions to process and transform data on-the-fly.
+3. **Data Storage**: Save processed data in S3, formatted and ready for analysis.
 4. **Analysis and Reporting**:
-   - Use AWS Athena for ad-hoc query performance.
-   - Amazon QuickSight integrates with S3 and Athena to provide interactive dashboards.
+   - Perform queries using AWS Athena for efficient data retrieval.
+   - Create interactive dashboards with Amazon QuickSight, integrating seamlessly with S3 and Athena.
 
-## Architecture
+## 🏛️ Architecture
+![System Architecture](architecture.jpeg)
 
-<img src="architecture.jpeg">
+## 🛠️ Services Used
+- **Amazon S3**: Robust object storage service that offers scalability and high data availability.
+- **AWS IAM**: Secures and manages access to AWS services.
+- **AWS Lambda**: Provides a serverless compute service to run code in response to events.
+- **AWS Glue**: Serverless data integration service that simplifies ETL processes.
+- **AWS Athena**: Executes SQL queries directly against data stored in S3.
+- **Amazon QuickSight**: Advanced BI tool for creating interactive data visualizations.
 
-## Services Used
+## 📊 Dataset
+This [Kaggle Dataset](https://www.kaggle.com/datasets/datasnaek/youtube-new) includes daily statistics of trending YouTube videos, captured over several months. Each record tracks video details such as title, channel, tags, views, likes/dislikes, and more, with data segmented by region.
 
-- **Amazon S3**: Object storage service with scalability and data availability.
-- **AWS IAM**: Manages access securely across AWS services.
-- **AWS Lambda**: Runs code in response to events without provisioning servers.
-- **AWS Glue**: Prepares and combines data for analysis without server management.
-- **AWS Athena**: SQL-based queries executed directly against data in S3.
-- **Amazon QuickSight**: BI service for data visualization.
+## 📝 ETL Pipelines executed
+![ETL Pipeline Stage 1](ETL_1.jpg)
+![ETL Pipeline Stage 2](ETL_2.jpg)
 
-## Dataset
-This Kaggle [Dataset](https://www.kaggle.com/datasets/datasnaek/youtube-new) contains statistics (CSV files) on daily popular YouTube videos over the course of many months. There are up to 200 trending videos published every day for many locations. The data for each region is in its own file. The video title, channel title, publication time, tags, views, likes and dislikes, description, and comment count are among the items included in the data. A category_id field, which differs by area, is also included in the JSON file linked to the region.
-
-## ETL Pipelines executed
-
-<img src="ETL_1.jpg">
-<img src="ETL_2.jpg">
-
-## Sample Dashboards 
-
-<img src="Visual_1.png">
-<img src="Visual_2.png">
+## 🖼️ Sample Dashboards
+![Sample Dashboard 1](Visual_1.png)
+![Sample Dashboard 2](Visual_2.png)
